@@ -1,0 +1,71 @@
+/* Center the card on the screen */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Background color for the entire page */
+}
+
+.container {
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.9);
+  height: 80%;
+  border-radius: 2rem;
+}
+
+/* Styling for the card */
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 300px;
+}
+
+/* Unique styles for the day and time */
+img {
+  border-radius: 2rem;
+  margin: 0.5rem;
+}
+.day {
+  font-size: 24px;
+  color: #5e5c5c;
+  margin-bottom: 10px;
+}
+
+.time {
+  font-size: 32px;
+  color: #0077cc; /* Change to your desired color */
+  font-weight: bold;
+}
+
+/* Additional styling for other elements if needed */
+.slack_name {
+  font-size: 38px;
+  color: #565651;
+  margin-bottom: 10px;
+}
+
+.track {
+  font-size: 20px;
+  font-weight: bold;
+  color: #a3a0a0;
+  margin-bottom: 10px;
+}
+
+.fa-solid {
+  font-size: 1.1rem;
+}
+.github a {
+  color: #0077cc; /* Change to your desired link color */
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.github a:hover {
+  text-decoration: underline;
+}

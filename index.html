@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/47cbef0d45.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="card.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="slack_profile">
+          <img
+            src="/image/Gojo BW.png"
+            alt="BigBen7"
+            width="500"
+            height="400"
+            data-testid="slackDisplayImage"
+          />
+        </div>
+        <div>
+          <div class="slack_name">BigBen7</div>
+          <div class="track" data-testid="">Frontend</div>
+
+          <div class="date_time">
+            <div class="day" data-testid="currentDayOfTheWeek"></div>
+            <div class="time" data-testid="currentUTCTime"></div>
+          </div>
+
+          <div>
+            <div class="github">
+              <a href="https://github.com/BigBen-7" data-testid="“githubURL”"
+                >Github <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function updateDateTime() {
+        const date = new Date();
+        const options = {
+          weekday: "long",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          timeZoneName: "short",
+        };
+        const formattedDate = date.toLocaleDateString("en-NG", options);
+
+        // Update the day and time elements in the HTML
+        document.querySelector(".day").textContent = formattedDate;
+
+        // Schedule the function to run again after a day (in milliseconds)
+        setTimeout(updateDateTime, 1000); // Update every second (1000 milliseconds)
+      }
+
+      // Initial call to updateDateTime to set the initial values
+      updateDateTime();
+    </script>
+  </body>
+</html>
